@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -35,8 +34,7 @@
       <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
         <div class="d-flex search-form">
           <label for="location-input" class="visually-hidden">Search Location</label>
-          <input class="form-control me-2" id="location-input" placeholder="Search a city" type="search"
-            aria-label="Search">
+          <input class="form-control me-2" id="location-input" placeholder="Search a city" type="search" aria-label="Search a city">
           <button id="search-button" aria-label="Search">
             <i class="bi bi-search"></i>
           </button>
@@ -48,9 +46,8 @@
       <!-- Navbar links on the right side -->
       <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
         <ul class="navbar-nav">
-
           <li class="nav-item">
-            <a class="nav-link" href="#"><i class="bi bi-globe"></i></a>
+            <a class="nav-link" href="#" aria-label="Language selection"><i class="bi bi-globe"></i></a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#">Sign up</a>
@@ -67,33 +64,31 @@
       <div id="filter-container" class="hidden">
         <div class="dropdown">
           <button class="btn btn-secondary dropdown-toggle mx-2" type="button" id="type-dropdown"
-            data-bs-toggle="dropdown" aria-expanded="false">
+            data-bs-toggle="dropdown" aria-expanded="false" aria-label="Filter by type of place">
             Type of place
           </button>
           <ul class="dropdown-menu" aria-labelledby="type-dropdown">
-            <li><a class="dropdown-item" onclick="_toggleType('entire-place')">
+            <li><a class="dropdown-item" onclick="_toggleType('entire-place')" href="#">
                 <i class="entire-place bi bi-check-square-fill"></i>
                 <i class="unchecked-entire-place hide bi bi-square"></i><span class="price">Entire Place</span></a>
             </li>
-
-            <li><a class="dropdown-item" onclick="_toggleType('private-room')">
+            <li><a class="dropdown-item" onclick="_toggleType('private-room')" href="#">
                 <i class="private-room bi bi-check-square-fill"></i>
                 <i class="unchecked-private-room hide bi bi-square"></i><span class="price">Private Room</span></a>
             </li>
-
-            <li><a class="dropdown-item" onclick="_toggleType('shared-room')">
+            <li><a class="dropdown-item" onclick="_toggleType('shared-room')" href="#">
                 <i class="shared-room bi bi-check-square-fill"></i>
-                <i class="unchecked-shared-room hide bi bi-square"></i> <span class="price">Shared Room</span></a>
+                <i class="unchecked-shared-room hide bi bi-square"></i><span class="price">Shared Room</span></a>
             </li>
           </ul>
         </div>
 
         <div class="dropdown">
-          <button class="btn btn-secondary dropdown-toggle me-2" type="button" id="type-dropdown"
-            data-bs-toggle="dropdown" aria-expanded="false">
+          <button class="btn btn-secondary dropdown-toggle me-2" type="button" id="min-price-dropdown"
+            data-bs-toggle="dropdown" aria-expanded="false" aria-label="Filter by minimum price">
             Min Price
           </button>
-          <ul class="dropdown-menu" aria-labelledby="type-dropdown">
+          <ul class="dropdown-menu" aria-labelledby="min-price-dropdown">
             <label for="min-price-range" class="form-label">Minimum Nightly</label><br>
             <output class="text-end">$0</output>
             <input type="range" class="form-range" id="min-price-range" min="0" max="1000" value="0"
@@ -111,12 +106,12 @@
         </div>
 
         <div class="dropdown">
-          <button class="btn btn-secondary dropdown-toggle" type="button" id="type-dropdown" data-bs-toggle="dropdown"
-            aria-expanded="false">
+          <button class="btn btn-secondary dropdown-toggle" type="button" id="max-price-dropdown" data-bs-toggle="dropdown"
+            aria-expanded="false" aria-label="Filter by maximum price">
             Max Price
           </button>
-          <ul class="dropdown-menu" aria-labelledby="type-dropdown">
-            <label for="max-price-range" class="form-label">Max Nightly</label> <br>
+          <ul class="dropdown-menu" aria-labelledby="max-price-dropdown">
+            <label for="max-price-range" class="form-label">Max Nightly</label><br>
             <output class="text-end">$1,000</output>
             <input type="range" class="form-range" id="max-price-range" min="0" max="1000" step="1" value="1000"
               oninput="this.previousElementSibling.value = '$' + this.value">
@@ -136,7 +131,6 @@
     <div id="listing-container" class="row row-cols-2 row-cols-md-4 g-4">
     </div>
   </div>
-
 
   <script src="https://unpkg.com/esprima@~4.0/dist/esprima.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
