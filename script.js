@@ -53,7 +53,7 @@ const _listingTemplate = `<div class="col">
       <div class="card listing h-100">
         <img src="{{imageSrc}}" class="card-img-top" alt="{{title}}">
         <div class="card-body">
-          <h5 class="card-title">{{title}}</h5>
+          <h2 class="card-title">{{title}}</h2>
           <span class="card-text text-truncate">{{city}}</span><br>
           <span class="card-text">{{stay-type}}</span>
           <p class="card-text"><span class="price">\${{price}}</span> night</p>
