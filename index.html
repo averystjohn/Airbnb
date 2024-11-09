@@ -5,6 +5,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
   <title>AirBnb</title>
+  <html lang="en">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -25,7 +26,7 @@
   <nav class="navbar navbar-expand-sm" id="search-container" style="background-color: #fff;">
     <div class="container">
       <!-- Navbar logo and toggle button -->
-      <a class="navbar-brand" id="logo">airbnb</a>
+      <a class="navbar-brand" id="logo" href="#" aria-label="Airbnb Logo">airbnb</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
         aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -34,13 +35,16 @@
       <!-- Search bar in the center -->
       <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
         <div class="d-flex search-form">
+          <label for="location-input" class="visually-hidden">Search Location</label>
           <input class="form-control me-2" id="location-input" placeholder="Search a city" type="search"
             paria-label="Search">
-          <button id="search-button">
+          <button id="search-button" aria-label="Search">
             <i class="bi bi-search"></i>
           </button>
         </div>
       </div>
+
+      <h1 class="visually-hidden">Airbnb Home Search</h1>
 
       <!-- Navbar links on the right side -->
       <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
